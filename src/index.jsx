@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import Theme from './styles/theme/theme';
+import GlobalStyle from './styles/theme/globalstyle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Theme>
+        <GlobalStyle>
+          <App />
+        </GlobalStyle>
+      </Theme>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
