@@ -7,14 +7,14 @@ import { BrowserRouter } from 'react-router-dom';
 import Theme from './styles/theme/theme';
 import GlobalStyle from './styles/theme/globalstyle';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Theme>
-        <GlobalStyle>
-          <App />
-        </GlobalStyle>
+        <GlobalStyle />
+        <App />
       </Theme>
     </BrowserRouter>
   </React.StrictMode>

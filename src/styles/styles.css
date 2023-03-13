@@ -1,0 +1,28 @@
+body {}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  padding: 15px 0;
+  margin: 0 0 10px 0;
+}
+
+.footerContainer {
+  text-align: center;
+  color: white;
+  background-color: var(--color-primary);
+  padding: 15px 0;
+  margin: auto 0;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+p {
+  margin: auto;
+}
