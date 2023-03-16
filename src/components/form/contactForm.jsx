@@ -1,32 +1,12 @@
 import React from "react";
-import styled from "styled-components";
-import BasicButton from "../design/button";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-
-const FormContainer = styled.div`
-  margin: 50px auto;
-  text-align: center;
-`;
-
-const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin: 10px;
-  max-width: 350px;
-`;
-
-const Input = styled.input`
-  padding: 5px;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-`;
-
-const Error = styled.p`
-  color: red;
-`;
+import BasicButton from "../styled/button";
+import InputContainer from "../styled/formInputContainer";
+import FormInput from "../styled/fromInput";
+import FormError from "../styled/formError";
+import FormTextarea from "../styled/formTextarea";
 
 const schema = yup
   .object({
@@ -38,7 +18,6 @@ const schema = yup
     email: yup
       .string()
       .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, `Enter a valid email address`)
-      // .email() --> could be used, but for me it allows it as soon as it has @. USE MATCHES!!
       .required(`Enter your email address`),
     subject: yup
       .string()
@@ -48,7 +27,7 @@ const schema = yup
     body: yup
       .string()
       .min(3, "You need at least 3 characters")
-      .max(1000, "Make sure to have 1000 characters or least")
+      .max(1000, "Make sure to have 1000 characters or less")
       .required(`Needs to contain some content`),
   })
   .required();
@@ -61,31 +40,31 @@ function Form() {
   }
 
   return (
-    <FormContainer>
+    <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Div>
+        <InputContainer>
           <label htmlFor="fullName">Full Name</label>
-          <Input {...register(`fullName`)} />
-          <Error>{errors.fullName?.message}</Error>
-        </Div>
-        <Div>
+          <FormInput {...register(`fullName`)} />
+          <FormError>{errors.fullName?.message}</FormError>
+        </InputContainer>
+        <InputContainer>
           <label htmlFor="email">Email</label>
-          <Input {...register(`email`)} />
-          <Error>{errors.email?.message}</Error>
-        </Div>
-        <Div>
+          <FormInput {...register(`email`)} />
+          <FormError>{errors.email?.message}</FormError>
+        </InputContainer>
+        <InputContainer>
           <label htmlFor="subject">Subject</label>
-          <Input {...register(`subject`)} />
-          <Error>{errors.subject?.message}</Error>
-        </Div>
-        <Div>
+          <FormInput {...register(`subject`)} />
+          <FormError>{errors.subject?.message}</FormError>
+        </InputContainer>
+        <InputContainer>
           <label htmlFor="body">Body</label>
-          <Input {...register(`body`)} />
-          <Error>{errors.body?.message}</Error>
-        </Div>
+          <FormTextarea {...register(`body`)} />
+          <FormError>{errors.body?.message}</FormError>
+        </InputContainer>
         <BasicButton>Submit</BasicButton>
       </form>
-    </FormContainer>
+    </div>
   )
 }
 

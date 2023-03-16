@@ -1,18 +1,14 @@
 import React from "react";
 import Form from "../../components/form/contactForm";
-import styled from "styled-components";
-
-const Div = styled.div`
-  text-align: center;
-`;
+import FormContainer from "../../components/styled/formContainer";
+import Heading1 from "../../components/styled/heading1";
 
 function Contact() {
   return (
-    <Div>
-      <h1>Contact Us</h1>
+    <FormContainer>
+      <Heading1>Contact Us</Heading1>
       <Form />
-    </Div>
-
+    </FormContainer>
   )
 }
 
