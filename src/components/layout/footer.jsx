@@ -1,11 +1,13 @@
 import React from "react";
+import FooterContainer from "../styled/footerContainer";
+import Paragraph from "../styled/paragraph";
 
 function Footer() {
   return (
-    <div className="footerContainer">
-      <p>You've reached the bottom..</p>
-      <p>Now, get up there and continue shopping!</p>
-    </div>
+    <FooterContainer>
+      <Paragraph>You've reached the bottom..</Paragraph>
+      <Paragraph>Now, get up there and continue shopping!</Paragraph>
+    </FooterContainer>
   )
 }
 
