@@ -3,10 +3,10 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import BasicButton from "../styled/button";
-import InputContainer from "../styled/formInputContainer";
-import FormInput from "../styled/fromInput";
-import FormError from "../styled/formError";
-import FormTextarea from "../styled/formTextarea";
+import InputContainer from "../styled/form/formInputContainer";
+import FormInput from "../styled/form/fromInput";
+import FormError from "../styled/form/formError";
+import FormTextarea from "../styled/form/formTextarea";
 
 const schema = yup
   .object({

@@ -1,17 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-
-const LinkStyle = styled(Link)`
-    margin: 10px;
-    font-size: 1.1em;
-    font-weight: 600;
-    color: white;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-`;
+import LinkStyle from "../styled/linkStyle";
 
 function Nav() {
   return (

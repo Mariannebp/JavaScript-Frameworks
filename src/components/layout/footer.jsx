@@ -1,6 +1,6 @@
 import React from "react";
-import FooterContainer from "../styled/footerContainer";
-import FooterSignature from "../styled/footerSignature";
+import FooterContainer from "../styled/footer/footerContainer";
+import FooterSignature from "../styled/footer/footerSignature";
 import Paragraph from "../styled/paragraph";
 
 function Footer() {
