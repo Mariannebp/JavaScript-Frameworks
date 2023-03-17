@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-const Heading1 = styled.h1`
+const Heading2 = styled.h2`
   color: var(--color-primary);
+  font-size: 1.3em;
   font-weight: 500;
-  margin: 50px auto;
+  margin: 20px auto;
 `;
 
-export default Heading1;
+export default Heading2;

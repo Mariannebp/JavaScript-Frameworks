@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "../../components/form/contactForm";
-import FormContainer from "../../components/styled/formContainer";
+import FormContainer from "../../components/styled/form/formContainer";
 import Heading1 from "../../components/styled/heading1";
 
 function Contact() {

@@ -8,6 +8,10 @@ const HeaderContainer = styled.div`
   background-color: var(--color-primary);
   padding: 15px 0;
   margin: 0 0 10px 0;
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+  }
   `;
 
 export default HeaderContainer;

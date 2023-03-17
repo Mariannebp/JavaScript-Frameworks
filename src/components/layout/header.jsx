@@ -1,27 +1,17 @@
 import React from "react";
-import Nav from "./nav";
-import Cart from "../../assets/icons/2703085_bag_cart_ecommerce_shop_icon.png"
-import styled from "styled-components";
 import { Link } from "react-router-dom";
-import HeaderContainer from "../styled/headerContainer";
-
-const CartInfo = styled.div`
-  display: flex;
-  margin-right: 10px;
-  color: white;
-`;
-
-const Icon = styled.img`
-  width: 40px;
-  height: 40px;
-`;
+import Nav from "./nav";
+import Cart from "../../assets/icons/2703085_bag_cart_ecommerce_shop_icon.png";
+import HeaderContainer from "../styled/header/headerContainer";
+import CartInfo from "../styled/header/cartInfo";
+import CartIcon from "../styled/header/cartIcon";
 
 function Header() {
   return (
     <HeaderContainer>
       <Nav />
       <CartInfo>
-        <Link to="/"><Icon src={Cart} alt="Cart" /></Link>
+        <Link to="/"><CartIcon src={Cart} alt="Cart" /></Link>
         <p>4</p>
       </CartInfo>
     </HeaderContainer>
