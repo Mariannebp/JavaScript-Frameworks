@@ -25,8 +25,8 @@ function Products() {
   return (
     <ProductsContainer>
       {data.map((d) => (
-        <ProductsLink to="/">
-          <ProductCard key={d.id}>
+        <ProductsLink to="/" key={d.id}>
+          <ProductCard>
             <ProductsImg src={d.imageUrl} alt={d.title} />
             <Heading2>{d.title}</Heading2>
             <ProductsPriceContainer>
