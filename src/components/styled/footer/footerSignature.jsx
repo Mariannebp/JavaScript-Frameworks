@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import Paragraph from "../paragraph";
 
-const FooterSignature = styled(Paragraph)`
-  margin-top: 30px;
+const FooterSignature = styled.p`
+  margin: 30px 0 0 0;
 `;
 
 export default FooterSignature;
