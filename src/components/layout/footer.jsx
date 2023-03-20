@@ -1,13 +1,12 @@
 import React from "react";
 import FooterContainer from "../styled/footer/footerContainer";
 import FooterSignature from "../styled/footer/footerSignature";
-import Paragraph from "../styled/paragraph";
 
 function Footer() {
   return (
     <FooterContainer>
-      <Paragraph>You've reached the bottom..</Paragraph>
-      <Paragraph>Now, get up there and continue shopping!</Paragraph>
+      <p>You've reached the bottom..</p>
+      <p>Now, get up there and continue shopping!</p>
       <FooterSignature>© 2023 Marianne Bjerløv Pedersen</FooterSignature>
     </FooterContainer>
   )

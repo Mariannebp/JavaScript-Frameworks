@@ -6,6 +6,7 @@ color: white;
 background-color: var(--color-primary);
 padding: 15px 0;
 margin: auto 0;
+
 `;
 
 export default FooterContainer;
