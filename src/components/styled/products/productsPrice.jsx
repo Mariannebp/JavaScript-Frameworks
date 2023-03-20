@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import Paragraph from "../paragraph";
 
-const ProductsPrice = styled(Paragraph)`
+const ProductsPrice = styled.p`
   margin: 15px 10px;
   font-weight: 500;
+  color: black;
 `;
 
 export default ProductsPrice;
