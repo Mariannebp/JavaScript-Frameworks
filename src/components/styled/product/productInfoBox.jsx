@@ -10,7 +10,6 @@ const ProductInfoBox = styled.div`
   @media (max-width: 321px) {
     width: 210px;
   }
-    
 `;
 
 export default ProductInfoBox;
