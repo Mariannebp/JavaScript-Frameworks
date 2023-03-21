@@ -1,13 +1,11 @@
 import React from "react";
 import Products from "../../components/home/products";
-import SearchBar from "../../components/home/searchbar";
 import HomeContainer from "../../components/styled/homeContainer";
 
 function Home() {
   return (
     <HomeContainer>
       <h1>The One and Online Shop</h1>
-      <SearchBar />
       <Products />
     </HomeContainer>
   )
