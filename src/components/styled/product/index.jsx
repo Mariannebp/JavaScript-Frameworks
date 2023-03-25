@@ -1,0 +1,14 @@
+export { AddToCartContainer } from "./AddToCartContainer";
+export { ProductContainer } from "./productContainer";
+export { ProductHeading1 } from "./productHeading1";
+export { ProductHeading2 } from "./productHeading2";
+export { ProductImg } from "./productImg";
+export { ProductInfo } from "./productInfo";
+export { ProductInfoBox } from "./productInfoBox";
+export { ProductInfoHeading } from "./productInfoHeading";
+export { ProductPrice } from "./productPrice";
+export { ProductRating } from "./productRating";
+export { ProductRatingNum } from "./productRatingNum";
+export { ProductText } from "./productText";
+export { ProductTextItalic } from "./productTextItalic";
+export { ReviewsContainer } from "./reviewsContainer";

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ReviewsContainer = styled.div`
+export const ReviewsContainer = styled.div`
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid var(--color-border);
@@ -19,5 +19,3 @@ const ReviewsContainer = styled.div`
     width: 210px;
   }
 `;
-
-export default ReviewsContainer;

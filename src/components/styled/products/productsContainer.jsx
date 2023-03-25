@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ProductsContainer = styled.div`
+export const ProductsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   transition: all 0.5s ease-in-out;
@@ -18,5 +18,3 @@ const ProductsContainer = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
-
-export default ProductsContainer;

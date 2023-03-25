@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FormTextarea = styled.textarea`
+export const FormTextarea = styled.textarea`
   width: 350px;
   height: 150px;
   border-radius: 5px;
@@ -10,5 +10,3 @@ const FormTextarea = styled.textarea`
     width: 220px;
   }
   `;
-
-export default FormTextarea;

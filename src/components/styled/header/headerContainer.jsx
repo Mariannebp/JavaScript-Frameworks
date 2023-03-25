@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,5 +13,3 @@ const HeaderContainer = styled.div`
     flex-direction: column;
   }
   `;
-
-export default HeaderContainer;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ProductInfoHeading = styled.div`
+export const ProductInfoHeading = styled.div`
   width: 250px;
   display: flex;
   justify-content: space-between;
@@ -9,5 +9,3 @@ const ProductInfoHeading = styled.div`
     width: 210px;
   }
 `;
-
-export default ProductInfoHeading;

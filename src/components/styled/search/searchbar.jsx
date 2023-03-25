@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import FormInput from "../form/fromInput";
+import * as f from "../form";
 
-const SearchInput = styled(FormInput)`
+export const SearchInput = styled(f.FormInput)`
   margin-bottom: 20px;
   padding: 10px;
   width: 300px;
@@ -10,5 +10,3 @@ const SearchInput = styled(FormInput)`
     width: 235px;
   }
 `;
-
-export default SearchInput;

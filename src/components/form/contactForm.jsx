@@ -3,10 +3,11 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import BasicButton from "../styled/button";
-import InputContainer from "../styled/form/formInputContainer";
-import FormInput from "../styled/form/fromInput";
-import FormError from "../styled/form/formError";
-import FormTextarea from "../styled/form/formTextarea";
+import * as f from "../../components/styled/form";
+// import InputContainer from "../styled/form/formInputContainer";
+// import FormInput from "../styled/form/fromInput";
+// import FormError from "../styled/form/formError";
+// import FormTextarea from "../styled/form/formTextarea";
 
 const schema = yup
   .object({
@@ -42,26 +43,26 @@ function Form() {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <InputContainer>
+        <f.InputContainer>
           <label htmlFor="fullName">Full Name</label>
-          <FormInput {...register(`fullName`)} />
-          <FormError>{errors.fullName?.message}</FormError>
-        </InputContainer>
-        <InputContainer>
+          <f.FormInput {...register(`fullName`)} />
+          <f.FormError>{errors.fullName?.message}</f.FormError>
+        </f.InputContainer>
+        <f.InputContainer>
           <label htmlFor="email">Email</label>
-          <FormInput {...register(`email`)} />
-          <FormError>{errors.email?.message}</FormError>
-        </InputContainer>
-        <InputContainer>
+          <f.FormInput {...register(`email`)} />
+          <f.FormError>{errors.email?.message}</f.FormError>
+        </f.InputContainer>
+        <f.InputContainer>
           <label htmlFor="subject">Subject</label>
-          <FormInput {...register(`subject`)} />
-          <FormError>{errors.subject?.message}</FormError>
-        </InputContainer>
-        <InputContainer>
+          <f.FormInput {...register(`subject`)} />
+          <f.FormError>{errors.subject?.message}</f.FormError>
+        </f.InputContainer>
+        <f.InputContainer>
           <label htmlFor="body">Body</label>
-          <FormTextarea {...register(`body`)} />
-          <FormError>{errors.body?.message}</FormError>
-        </InputContainer>
+          <f.FormTextarea {...register(`body`)} />
+          <f.FormError>{errors.body?.message}</f.FormError>
+        </f.InputContainer>
         <BasicButton>Submit</BasicButton>
       </form>
     </div>

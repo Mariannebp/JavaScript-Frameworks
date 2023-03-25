@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const ProductsLink = styled(Link)`
+export const ProductsLink = styled(Link)`
   text-decoration: none;
   width: 300px;
   margin: auto;
@@ -14,5 +14,3 @@ const ProductsLink = styled(Link)`
     width: 235px;
   }
 `;
-
-export default ProductsLink;

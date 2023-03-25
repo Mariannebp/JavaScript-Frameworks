@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const AddToCart = styled.div`
+export const AddToCartContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 250px;
@@ -16,5 +16,3 @@ const AddToCart = styled.div`
     max-width: 210px;
   }
 `;
-
-export default AddToCart;
