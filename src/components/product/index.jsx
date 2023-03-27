@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useApi from "../hooks/useApi";
 import url from "../constants";
@@ -12,6 +12,10 @@ function ProductSpecific() {
   let { id } = useParams();
   const { data, isLoading, isError } = useApi(url + id);
   const { addItemToCart } = useCart();
+
+  useEffect(() => {
+    document.title = `The One | ${data.title}`;
+  })
 
   if (isLoading) {
     return <Loading />;

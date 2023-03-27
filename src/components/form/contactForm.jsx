@@ -1,13 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import BasicButton from "../styled/button";
 import * as f from "../../components/styled/form";
-// import InputContainer from "../styled/form/formInputContainer";
-// import FormInput from "../styled/form/fromInput";
-// import FormError from "../styled/form/formError";
-// import FormTextarea from "../styled/form/formTextarea";
 
 const schema = yup
   .object({
@@ -35,6 +31,10 @@ const schema = yup
 
 function Form() {
   const { register, handleSubmit, formState: { errors }, } = useForm({ resolver: yupResolver(schema) });
+
+  useEffect(() => {
+    document.title = "The One | Contact";
+  })
 
   function onSubmit(data) {
     console.log(data);

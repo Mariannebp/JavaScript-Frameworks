@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import url from "../constants";
 import useApi from "../hooks/useApi";
 import Loading from "../styled/loading";
@@ -9,6 +9,10 @@ import SearchBar from "./searchbar";
 function Products() {
   const { data, isLoading, isError } = useApi(url);
   const [searchInput, setSearchInput] = useState("");
+
+  useEffect(() => {
+    document.title = "The One | Home";
+  })
 
   if (isLoading) {
     return <Loading />;
