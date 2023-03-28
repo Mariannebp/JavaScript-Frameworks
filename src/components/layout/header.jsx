@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Nav from "./nav";
 import Cart from "../../assets/icons/2703085_bag_cart_ecommerce_shop_icon.png";
 import * as h from "../../components/styled/header";
-import useCart from "../cart/useCart";
+import useCart from "../hooks/useCart";
 
 function Header() {
   const { cart } = useCart();

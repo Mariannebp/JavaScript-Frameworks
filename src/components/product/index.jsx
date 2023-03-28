@@ -6,7 +6,7 @@ import Loading from "../styled/loading";
 import * as price from "../styled/productDiscount";
 import * as p from "../styled/product";
 import BasicButton from "../styled/button";
-import useCart from "../cart/useCart";
+import useCart from "../hooks/useCart";
 
 function ProductSpecific() {
   let { id } = useParams();

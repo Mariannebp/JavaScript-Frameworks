@@ -1,4 +1,4 @@
-import useCartStore from "../hooks/useCartStore";
+import useCartStore from "./useCartStore";
 
 function useCart() {
   const addProductToCart = useCartStore((state) => state.addProductToCart);
@@ -9,6 +9,7 @@ function useCart() {
 
   function addItemToCart(id) {
     addProductToCart(id);
+    window.location.reload();
   }
 
   return {
