@@ -15,13 +15,10 @@ const useCartStore = create((set) => ({
           quantity: updateCart[cartItems].quantity + quantity,
         };
         updateCart.splice(cartItems, 1, updateItem);
-        window.location.reload();
       } else {
         updateCart.push({ id, quantity })
-        window.location.reload();
       }
       localStorage.setItem("Cart", JSON.stringify(updateCart));
-
     })
   },
 
