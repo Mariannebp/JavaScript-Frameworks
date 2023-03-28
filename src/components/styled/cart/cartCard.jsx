@@ -10,10 +10,17 @@ export const CartCard = styled.div`
   padding: 10px;
   border: 1px solid var(--color-border);
   border-radius: 5px;
-  width: 400px;
+  width: 500px;
+
+  @media (min-width: 431px) and (max-width: 520px) {
+    width: 400px;
+  }
 
   @media (min-width: 321px) and (max-width: 430px) {
-    width: 300px;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    width: 298px;
   }
 
   @media (max-width: 320px) {

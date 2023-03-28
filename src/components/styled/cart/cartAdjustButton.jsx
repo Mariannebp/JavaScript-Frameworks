@@ -5,6 +5,6 @@ export const CartAdjustButton = styled.button`
   color: white;
   border-radius: 5px;
   border: 1px solid var(--color-border);
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
 `;

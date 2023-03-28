@@ -10,3 +10,4 @@ export { CartQtyContainer } from "./cartQtyContainer";
 export { CartEmptyContainer } from "./cartEmptyContainer";
 export { CartCheckoutContainer } from "./cartCheckoutContainer";
 export { CartCardBox } from "./cartCardBox";
+export { CartCardBox2 } from "./cartCardBox2";
