@@ -4,8 +4,15 @@ const GlobalStyle = createGlobalStyle`
   html {
     --color-primary: #0097A8;
     --color-secondary: #6AA88F;
-    --color-border: lightgrey;
+    --color-border: #d3d3d3;
+    --color-background: #fff;
+    --color-backgroundBody: #EDEDED;
+
   }
+  body {
+    background-color: var(--color-backgroundBody)
+  }
+
   h1 {
     color: var(--color-primary);
     font-weight: 500;
