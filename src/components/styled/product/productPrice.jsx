@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import ProductsPrice from "../products/productsPrice";
+import * as p from "../products"
 
-const ProductPrice = styled(ProductsPrice)`
+export const ProductPrice = styled(p.ProductsPrice)`
   margin: 15px 10px;
   font-weight: 500;
   font-size: 1.1em;
   color: black;
 `;
-
-export default ProductPrice;

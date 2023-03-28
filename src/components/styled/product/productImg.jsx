@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ProductImg = styled.img`
+export const ProductImg = styled.img`
   width: 400px;
 
   @media (min-width: 650px) and (max-width: 770px) {
@@ -19,5 +19,3 @@ const ProductImg = styled.img`
     width: 210px;
   }
 `;
-
-export default ProductImg;

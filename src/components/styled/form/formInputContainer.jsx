@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const InputContainer = styled.div`
+export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -12,5 +12,3 @@ const InputContainer = styled.div`
     margin: 5px 0;
   }
 `;
-
-export default InputContainer;

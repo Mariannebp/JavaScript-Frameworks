@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ProductCard = styled.div`
+export const ProductCard = styled.div`
   border: 1px solid var(--color-border);
   border-radius: 5px;
   text-align: center;
@@ -11,5 +11,3 @@ const ProductCard = styled.div`
     width: 235px;
   }
 `;
-
-export default ProductCard;

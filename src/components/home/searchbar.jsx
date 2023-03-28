@@ -1,6 +1,5 @@
 import React from "react";
-import FormSearch from "../styled/search/formSearch"
-import SearchInput from "../styled/search/searchbar";
+import * as s from "../../components/styled/search";
 
 function SearchBar({ searchInput, onSearchInput }) {
 
@@ -9,9 +8,9 @@ function SearchBar({ searchInput, onSearchInput }) {
   }
 
   return (
-    <FormSearch>
-      <SearchInput type="search" id="search" placeholder="Search..." onChange={onInputChange} value={searchInput} />
-    </FormSearch>
+    <s.FormSearch>
+      <s.SearchInput type="search" id="search" placeholder="Search..." onChange={onInputChange} value={searchInput} />
+    </s.FormSearch>
   )
 };
 

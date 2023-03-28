@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ProductInfo = styled.div`
+export const ProductInfo = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   gap: 30px;
@@ -26,5 +26,3 @@ const ProductInfo = styled.div`
     width: 210px;
   }
 `;
-
-export default ProductInfo;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ProductDiscountContainer = styled.div`
+export const ProductDiscountContainer = styled.div`
   width: 34px;
   height: 34px;
   text-align: center;
@@ -10,5 +10,3 @@ const ProductDiscountContainer = styled.div`
   padding: 5px;
   margin: 0 10px;
 `;
-
-export default ProductDiscountContainer;

@@ -1,32 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useApi from "../hooks/useApi";
+import url from "../constants";
 import Loading from "../styled/loading";
-import ProductContainer from "../styled/product/productContainer";
-import ProductRating from "../styled/product/productRating";
-import ProductRatingNum from "../styled/product/productRatingNum";
-import ProductImg from "../styled/product/productImg";
-import ProductInfo from "../styled/product/productInfo";
-import ProductInfoBox from "../styled/product/productInfoBox";
-import ProductText from "../styled/product/productText";
-import ProductPrice from "../styled/product/productPrice";
-import ProductInfoHeading from "../styled/product/productInfoHeading";
-import ProductHeading2 from "../styled/product/productHeading2";
-import ProductDiscountContainer from "../styled/productDiscount/productDiscountContainer";
-import ProductDiscount from "../styled/productDiscount/productDiscount";
+import * as price from "../styled/productDiscount";
+import * as p from "../styled/product";
 import BasicButton from "../styled/button";
-import AddToCart from "../styled/product/addToCart";
-import ProductTextItalic from "../styled/product/productTextItalic";
-import ReviewsContainer from "../styled/product/reviewsContainer";
-import ProductHeading1 from "../styled/product/productHeading1";
-
+import useCart from "../hooks/useCart";
 
 function ProductSpecific() {
   let { id } = useParams();
-  const url = 'https://api.noroff.dev/api/v1/online-shop/';
   const { data, isLoading, isError } = useApi(url + id);
+  const { addItemToCart } = useCart();
 
-  console.log(data)
+  useEffect(() => {
+    document.title = `The One | ${data.title}`;
+  })
+
   if (isLoading) {
     return <Loading />;
   }
@@ -36,39 +26,39 @@ function ProductSpecific() {
   }
 
   return (
-    <ProductContainer>
-      <ProductHeading1>{data.title}</ProductHeading1>
-      <ProductRating>Rating: <ProductRatingNum>{data.rating}/5</ProductRatingNum></ProductRating>
-      <ProductInfo>
-        <ProductImg src={data.imageUrl} alt={data.title} />
-        <ProductInfoBox>
+    <p.ProductContainer>
+      <p.ProductHeading1>{data.title}</p.ProductHeading1>
+      <p.ProductRating>Rating: <p.ProductRatingNum>{data.rating}/5</p.ProductRatingNum></p.ProductRating>
+      <p.ProductInfo>
+        <p.ProductImg src={data.imageUrl} alt={data.title} />
+        <p.ProductInfoBox>
           <div>
-            <ProductInfoHeading>
-              <ProductHeading2>Description</ProductHeading2>
-              {data.price > data.discountedPrice ? <ProductDiscountContainer><ProductDiscount>{Math.round(((data.discountedPrice - data.price) / data.price) * 100)}%</ProductDiscount></ProductDiscountContainer> : null}
-            </ProductInfoHeading>
+            <p.ProductInfoHeading>
+              <p.ProductHeading2>Description</p.ProductHeading2>
+              {data.price > data.discountedPrice ? <price.ProductDiscountContainer><price.ProductDiscount>{Math.round(((data.discountedPrice - data.price) / data.price) * 100)}%</price.ProductDiscount></price.ProductDiscountContainer> : null}
+            </p.ProductInfoHeading>
 
-            <ProductText>{data.description}</ProductText>
+            <p.ProductText>{data.description}</p.ProductText>
           </div>
-          <AddToCart>
-            <ProductPrice>${data.discountedPrice}</ProductPrice>
-            <BasicButton>Add to cart</BasicButton>
-          </AddToCart>
-        </ProductInfoBox>
-      </ProductInfo>
+          <p.AddToCartContainer>
+            <p.ProductPrice>${data.discountedPrice}</p.ProductPrice>
+            <BasicButton onClick={() => addItemToCart(id)}>Add to cart</BasicButton>
+          </p.AddToCartContainer>
+        </p.ProductInfoBox>
+      </p.ProductInfo>
       <div>
         <h3>Reviews</h3>
         <div>
           {data.reviews && data.reviews.length ? data.reviews.map((d) => (
-            <ReviewsContainer key={d.id}>
+            <p.ReviewsContainer key={d.id}>
               <h4>{d.username}</h4>
-              <ProductRating>Rating: {d.rating}</ProductRating>
-              <ProductText>{d.description}</ProductText>
-            </ReviewsContainer>
-          )) : <ProductTextItalic>Sorry, there are currently no reviews for this product</ProductTextItalic>}
+              <p.ProductRating>Rating: {d.rating}</p.ProductRating>
+              <p.ProductText>{d.description}</p.ProductText>
+            </p.ReviewsContainer>
+          )) : <p.ProductTextItalic>Sorry, there are currently no reviews for this product</p.ProductTextItalic>}
         </div>
       </div>
-    </ProductContainer>
+    </p.ProductContainer>
   )
 }
 
