@@ -8,5 +8,5 @@ export const CartCard = styled.div`
   padding: 10px;
   border: 1px solid var(--color-border);
   border-radius: 5px;
-  width: 300px;
+  width: 400px;
 `;
