@@ -7,13 +7,14 @@ import useCart from "../cart/useCart";
 
 function Header() {
   const { cart } = useCart();
+  const totalItems = cart.reduce((accumulator, item) => accumulator + item.quantity, 0)
 
   return (
     <h.HeaderContainer>
       <Nav />
       <h.CartInfo>
-        <Link to="/"><h.CartIcon src={Cart} alt="Cart" /></Link>
-        {cart.length > 0 ? <p>{cart.length}</p> : 0}
+        <Link to="/pages/cart"><h.CartIcon src={Cart} alt="Cart" /></Link>
+        {cart.length > 0 ? <p>{totalItems}</p> : 0}
       </h.CartInfo>
     </h.HeaderContainer>
   )
