@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CartContainer = styled.div`
-  margin: 0 auto auto auto;
+  margin: 0 auto 50px auto;
   width: 522px;
 
   @media (min-width: 431px) and (max-width: 523px) {
