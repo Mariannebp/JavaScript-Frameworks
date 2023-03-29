@@ -28,7 +28,8 @@ function ProductSpecific() {
   return (
     <p.ProductContainer>
       <p.ProductHeading1>{data.title}</p.ProductHeading1>
-      <p.ProductRating>Rating: <p.ProductRatingNum>{data.rating}/5</p.ProductRatingNum></p.ProductRating>
+      {data.reviews && data.reviews.length > 0 ? <p.ProductRating>Rating: <p.ProductRatingNum>{data.rating}/5</p.ProductRatingNum></p.ProductRating> : <p.ProductRating>Rating: <p.ProductRatingNum>none</p.ProductRatingNum></p.ProductRating>}
+
       <p.ProductInfo>
         <p.ProductImg src={data.imageUrl} alt={data.title} />
         <p.ProductInfoBox>
@@ -55,7 +56,7 @@ function ProductSpecific() {
               <p.ProductRating>Rating: {d.rating}</p.ProductRating>
               <p.ProductText>{d.description}</p.ProductText>
             </p.ReviewsContainer>
-          )) : <p.ProductTextItalic>Sorry, there are currently no reviews for this product</p.ProductTextItalic>}
+          )) : <p.ProductTextItalic>There are currently no reviews for this product.</p.ProductTextItalic>}
         </div>
       </div>
     </p.ProductContainer>
