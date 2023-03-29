@@ -16,7 +16,6 @@ function useCart() {
    */
   function addItemToCart(id) {
     addProductToCart(id);
-    window.location.reload();
   }
 
   return {
