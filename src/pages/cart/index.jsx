@@ -2,6 +2,9 @@ import React from "react";
 import CartContent from "../../components/cart/cart";
 import * as c from "../../components/styled/cart"
 
+/**
+ * Renders the content of the cart page.
+ */
 function Cart() {
 
   return (

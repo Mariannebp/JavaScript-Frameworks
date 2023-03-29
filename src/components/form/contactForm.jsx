@@ -29,6 +29,9 @@ const schema = yup
   })
   .required();
 
+/**
+ * Creates the form for the contact page, with proper validation 
+ */
 function Form() {
   const { register, handleSubmit, formState: { errors }, } = useForm({ resolver: yupResolver(schema) });
 
@@ -36,6 +39,10 @@ function Form() {
     document.title = "The One | Contact";
   })
 
+  /**
+   * Function that sets that console logs the information from form. The function is passed in as a parameter on handleSubmit.
+   * @param {string} data - gets the information to be console logged.
+   */
   function onSubmit(data) {
     console.log(data);
   }

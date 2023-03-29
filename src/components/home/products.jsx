@@ -6,6 +6,9 @@ import * as p from "../../components/styled/products"
 import * as price from "../styled/productDiscount";
 import SearchBar from "./searchbar";
 
+/**
+ * Creates the content of the products page, and how each product is to be displayed. 
+ */
 function Products() {
   const { data, isLoading, isError } = useApi(url);
   const [searchInput, setSearchInput] = useState("");
@@ -31,7 +34,7 @@ function Products() {
             return searchInput.toLowerCase() === d.title.toLowerCase ? d : d.title.toLowerCase().includes(searchInput);
           })
           .map((d) => (
-            <p.ProductsLink to={`${d.id}`} key={d.id}>
+            <p.ProductsLink to={`/pages/product/${d.id}`} key={d.id}>
               <p.ProductCard>
                 <p.ProductsImg src={d.imageUrl} alt={d.title} />
                 <h2>{d.title}</h2>

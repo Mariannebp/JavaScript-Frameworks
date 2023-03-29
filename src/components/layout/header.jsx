@@ -4,6 +4,9 @@ import Cart from "../../assets/icons/2703085_bag_cart_ecommerce_shop_icon.png";
 import * as h from "../../components/styled/header";
 import useCart from "../hooks/useCart";
 
+/**
+ * Creates and renders content of the header.
+ */
 function Header() {
   const { cart } = useCart();
   const totalItems = cart.reduce((accumulator, item) => accumulator + item.quantity, 0)

@@ -1,5 +1,8 @@
 import { create } from 'zustand';
 
+/**
+ * A hook that sets the cart handling functionalities.
+ */
 const useCartStore = create((set) => ({
   cart: JSON.parse(localStorage.getItem("Cart")) || [],
 
@@ -64,6 +67,5 @@ const useCartStore = create((set) => ({
     set({ cart: [] });
   },
 }));
-
 
 export default useCartStore;

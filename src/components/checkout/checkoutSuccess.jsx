@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import * as c from "../../components/styled/checkout";
 
+/**
+ * Creates content for the checkout success page.
+ */
 function CheckoutSuccess() {
   useEffect(() => {
     document.title = "The One | Checkout Success";
