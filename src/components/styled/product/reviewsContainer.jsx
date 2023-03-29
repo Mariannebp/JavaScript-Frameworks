@@ -5,6 +5,7 @@ export const ReviewsContainer = styled.div`
   padding: 10px;
   border: 1px solid var(--color-border);
   border-radius: 5px;
+  background-color: var(--color-background);
   width: 500px;
 
   @media (min-width: 440px) and (max-width: 649px) {

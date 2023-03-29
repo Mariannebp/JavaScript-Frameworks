@@ -49,14 +49,14 @@ function CartContent() {
                 <c.CartImg src={filteredItems.imageUrl} alt={filteredItems.title} />
                 <p>{filteredItems.title}</p>
               </c.CartCardBox>
-              <c.CartCardBox>
+              <c.CartCardBox2>
                 <c.CartQtyContainer>
                   <c.CartAdjustButton onClick={() => removeOne(id)}>-</c.CartAdjustButton>
                   <c.CartQty>{quantity}</c.CartQty>
                   <c.CartAdjustButton onClick={() => addOne(id)}>+</c.CartAdjustButton>
                 </c.CartQtyContainer>
                 <p>${filteredItems.discountedPrice}</p>
-              </c.CartCardBox>
+              </c.CartCardBox2>
 
             </c.CartCard>
           )

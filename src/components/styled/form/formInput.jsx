@@ -5,7 +5,7 @@ export const FormInput = styled.input`
   border: 1px solid var(--color-border);
   border-radius: 5px;
 
-  @media (max-width: 480px) {
-    width: 220px;
+  @media (max-width: 350px) {
+    width: 200px;
   }
 `;

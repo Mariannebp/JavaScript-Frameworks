@@ -3,3 +3,4 @@ export { FormError } from "./formError";
 export { InputContainer } from "./formInputContainer";
 export { FormTextarea } from "./formTextarea";
 export { FormInput } from "./formInput";
+export { FormBox } from "./formBox";

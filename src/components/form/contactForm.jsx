@@ -41,7 +41,7 @@ function Form() {
   }
 
   return (
-    <div>
+    <f.FormBox>
       <form onSubmit={handleSubmit(onSubmit)}>
         <f.InputContainer>
           <label htmlFor="fullName">Full Name</label>
@@ -65,7 +65,7 @@ function Form() {
         </f.InputContainer>
         <BasicButton>Submit</BasicButton>
       </form>
-    </div>
+    </f.FormBox>
   )
 }
 
