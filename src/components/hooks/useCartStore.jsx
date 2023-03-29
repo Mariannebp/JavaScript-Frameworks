@@ -22,6 +22,7 @@ const useCartStore = create((set) => ({
         updateCart.push({ id, quantity })
       }
       localStorage.setItem("Cart", JSON.stringify(updateCart));
+      return { cart: updateCart };
     })
   },
 
