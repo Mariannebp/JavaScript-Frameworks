@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CartIcon = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 42px;
+  height: 42px;
+  padding-top: 3px;
 `;

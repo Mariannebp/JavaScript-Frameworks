@@ -1,3 +1,4 @@
 export { CartIcon } from "./cartIcon";
-export { CartInfo } from "./cartInfo";
+export { CartIconCount } from "./cartIconCount";
+export { CartIconLink } from "./cartIconLink";
 export { HeaderContainer } from "./headerContainer";

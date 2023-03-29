@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Nav from "./nav";
 import Cart from "../../assets/icons/2703085_bag_cart_ecommerce_shop_icon.png";
 import * as h from "../../components/styled/header";
@@ -12,10 +11,9 @@ function Header() {
   return (
     <h.HeaderContainer>
       <Nav />
-      <h.CartInfo>
-        <Link to="/pages/cart"><h.CartIcon src={Cart} alt="Cart" /></Link>
-        {cart.length > 0 ? <p>{totalItems}</p> : 0}
-      </h.CartInfo>
+      <div>
+        <h.CartIconLink to="/pages/cart"><h.CartIcon src={Cart} alt="Cart" />{cart.length > 0 ? <h.CartIconCount>{totalItems}</h.CartIconCount> : <h.CartIconCount>0</h.CartIconCount>}</h.CartIconLink>
+      </div>
     </h.HeaderContainer>
   )
 }
