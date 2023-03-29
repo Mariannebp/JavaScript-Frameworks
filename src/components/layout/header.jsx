@@ -12,10 +12,9 @@ function Header() {
   return (
     <h.HeaderContainer>
       <Nav />
-      <h.CartInfo>
-        <Link to="/pages/cart"><h.CartIcon src={Cart} alt="Cart" /></Link>
-        {cart.length > 0 ? <p>{totalItems}</p> : 0}
-      </h.CartInfo>
+      <div>
+        <h.CartIconLink to="/pages/cart"><h.CartIcon src={Cart} alt="Cart" />{cart.length > 0 ? <h.CartIconCount>{totalItems}</h.CartIconCount> : <h.CartIconCount>0</h.CartIconCount>}</h.CartIconLink>
+      </div>
     </h.HeaderContainer>
   )
 }
