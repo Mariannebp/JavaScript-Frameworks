@@ -34,7 +34,7 @@ function Products() {
             return searchInput.toLowerCase() === d.title.toLowerCase ? d : d.title.toLowerCase().includes(searchInput);
           })
           .map((d) => (
-            <p.ProductsLink to={`${d.id}`} key={d.id}>
+            <p.ProductsLink to={`/pages/product/${d.id}`} key={d.id}>
               <p.ProductCard>
                 <p.ProductsImg src={d.imageUrl} alt={d.title} />
                 <h2>{d.title}</h2>
