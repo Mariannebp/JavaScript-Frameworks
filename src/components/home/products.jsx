@@ -6,6 +6,9 @@ import * as p from "../../components/styled/products"
 import * as price from "../styled/productDiscount";
 import SearchBar from "./searchbar";
 
+/**
+ * Creates the content of the products page, and how each product is to be displayed. 
+ */
 function Products() {
   const { data, isLoading, isError } = useApi(url);
   const [searchInput, setSearchInput] = useState("");

@@ -8,6 +8,9 @@ import * as c from "../../components/styled/cart"
 import BasicButton from "../../components/styled/button";
 import LinkStyle from "../../components/styled/linkStyle";
 
+/**
+ * Function that creates the carts content.
+ */
 function CartContent() {
   const { data, isLoading, isError } = useApi(url);
   const { cart, addOne, removeOne, emptyCart } = useCart();
@@ -24,6 +27,9 @@ function CartContent() {
     return <div>Oops, something went wrong here..</div>;
   }
 
+  /**
+   * Calculates the total sum of all the products currently in the cart
+   */
   const totalPrice = cart.reduce((accumulator, item) => {
     const items = data.find((thisItem) => thisItem.id === item.id);
     if (!items) {

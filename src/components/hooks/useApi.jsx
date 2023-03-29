@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * A hook that fetches data from the API
+ * @param {string} url - passes the url of the API targeted.
+ */
 function useApi(url) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

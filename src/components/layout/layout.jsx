@@ -9,6 +9,9 @@ const LayoutContainer = styled.div`
   min-height: 100vh;
 `;
 
+/**
+ * Sets and renders the layout for the pages.
+ */
 function Layout() {
   return (
     <LayoutContainer>

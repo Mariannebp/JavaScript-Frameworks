@@ -8,6 +8,9 @@ import * as p from "../styled/product";
 import BasicButton from "../styled/button";
 import useCart from "../hooks/useCart";
 
+/**
+ * Creates the content for the individual products page.
+ */
 function ProductSpecific() {
   let { id } = useParams();
   const { data, isLoading, isError } = useApi(url + id);
