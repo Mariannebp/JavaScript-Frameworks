@@ -51,7 +51,7 @@ function ProductSpecific() {
         </p.ProductInfoBox>
       </p.ProductInfo>
       <div>
-        <h3>Reviews</h3>
+        <p.ProductHeading3>Reviews</p.ProductHeading3>
         <div>
           {data.reviews && data.reviews.length ? data.reviews.map((d) => (
             <p.ReviewsContainer key={d.id}>
