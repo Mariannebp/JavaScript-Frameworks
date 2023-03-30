@@ -32,7 +32,7 @@ function Products() {
       <p.ProductsContainer>
         {data
           .filter((d) => {
-            return searchInput.toLowerCase() === d.title.toLowerCase ? d : d.title.toLowerCase().includes(searchInput);
+            return searchInput.toLowerCase() === d.title.toLowerCase ? d : d.title.toLowerCase().includes(searchInput.toLowerCase());
           })
           .map((d) => (
             <p.ProductsCardBox to={`/pages/product/${d.id}`} key={d.id}>
