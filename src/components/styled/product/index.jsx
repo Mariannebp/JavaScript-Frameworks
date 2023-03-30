@@ -2,6 +2,7 @@ export { AddToCartContainer } from "./AddToCartContainer";
 export { ProductContainer } from "./productContainer";
 export { ProductHeading1 } from "./productHeading1";
 export { ProductHeading2 } from "./productHeading2";
+export { ProductHeading3 } from "./productHeading3";
 export { ProductImg } from "./productImg";
 export { ProductInfo } from "./productInfo";
 export { ProductInfoBox } from "./productInfoBox";

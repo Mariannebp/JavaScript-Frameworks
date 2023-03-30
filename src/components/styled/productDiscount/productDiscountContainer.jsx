@@ -5,7 +5,7 @@ export const ProductDiscountContainer = styled.div`
   height: 34px;
   text-align: center;
   border-radius: 100px;
-  background-color: red;
+  background-color: var(--color-highlight);
   color: white;
   padding: 5px;
   margin: 0 10px;

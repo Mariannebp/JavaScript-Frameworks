@@ -2,5 +2,6 @@ import styled from "styled-components";
 
 export const CartIconCount = styled.p`
   position: absolute;
-  font-weight: 500;
+  margin-top: 5px;
+  font-weight: 600;
 `;

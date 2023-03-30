@@ -2,12 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   html {
-    --color-primary: #0097A8;
-    --color-secondary: #6AA88F;
+    --color-primary: #00818F;
+    --color-secondary: #417376;
     --color-border: #d3d3d3;
     --color-background: #fff;
     --color-backgroundBody: #EDEDED;
-
+    --color-highlight: #dc1839;
   }
   body {
     background-color: var(--color-backgroundBody)
