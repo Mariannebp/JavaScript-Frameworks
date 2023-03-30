@@ -12,12 +12,15 @@ function SearchBar({ searchInput, onSearchInput }) {
    * @param {string} e - input information
    */
   function onInputChange(e) {
-    e.preventDefault();
     onSearchInput(e.currentTarget.value)
   }
 
+  function onFormSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
-    <s.FormSearch>
+    <s.FormSearch onSubmit={onFormSubmit}>
       <s.SearchInput type="search" id="search" placeholder="Search..." onChange={onInputChange} value={searchInput} />
     </s.FormSearch>
   )
