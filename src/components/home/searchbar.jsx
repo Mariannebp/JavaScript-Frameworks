@@ -21,6 +21,7 @@ function SearchBar({ searchInput, onSearchInput }) {
 
   return (
     <s.FormSearch onSubmit={onFormSubmit}>
+      <label htmlFor="search"></label>
       <s.SearchInput type="search" id="search" placeholder="Search..." onChange={onInputChange} value={searchInput} />
     </s.FormSearch>
   )

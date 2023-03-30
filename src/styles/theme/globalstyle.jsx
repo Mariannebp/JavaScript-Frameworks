@@ -6,10 +6,8 @@ const GlobalStyle = createGlobalStyle`
     --color-secondary: #417376;
     --color-border: #d3d3d3;
     --color-background: #fff;
-    /* --color-backgroundBody: #FCFCFC; */
     --color-backgroundBody: #EDEDED;
     --color-highlight: #dc1839;
-
   }
   body {
     background-color: var(--color-backgroundBody)

@@ -52,22 +52,22 @@ function Form() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <f.InputContainer>
           <label htmlFor="fullName">Full Name</label>
-          <f.FormInput {...register(`fullName`)} />
+          <f.FormInput id="fullName" {...register(`fullName`)} />
           <f.FormError>{errors.fullName?.message}</f.FormError>
         </f.InputContainer>
         <f.InputContainer>
           <label htmlFor="email">Email</label>
-          <f.FormInput {...register(`email`)} />
+          <f.FormInput id="email" {...register(`email`)} />
           <f.FormError>{errors.email?.message}</f.FormError>
         </f.InputContainer>
         <f.InputContainer>
           <label htmlFor="subject">Subject</label>
-          <f.FormInput {...register(`subject`)} />
+          <f.FormInput id="subject" {...register(`subject`)} />
           <f.FormError>{errors.subject?.message}</f.FormError>
         </f.InputContainer>
         <f.InputContainer>
           <label htmlFor="body">Body</label>
-          <f.FormTextarea {...register(`body`)} />
+          <f.FormTextarea id="body" {...register(`body`)} />
           <f.FormError>{errors.body?.message}</f.FormError>
         </f.InputContainer>
         <BasicButton>Submit</BasicButton>
