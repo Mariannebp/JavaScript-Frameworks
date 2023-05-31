@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import BasicButton from "../styled/button";
 import * as f from "../../components/styled/form";
+import { createPortal } from "react-dom";
 
 const schema = yup
   .object({
@@ -39,12 +40,15 @@ function Form() {
     document.title = "The One | Contact";
   })
 
+  const [showModal, setShowModal] = useState(false);
+
   /**
    * Function that sets that console logs the information from form. The function is passed in as a parameter on handleSubmit.
    * @param {string} data - gets the information to be console logged.
    */
   function onSubmit(data) {
     console.log(data);
+    setShowModal(true);
   }
 
   return (
@@ -72,6 +76,14 @@ function Form() {
         </f.InputContainer>
         <BasicButton>Submit</BasicButton>
       </form>
+      {showModal && createPortal(
+        <f.FormModal >
+          <p>Your message is sent.</p>
+          <p>Thank you for contacting us!</p>
+          <BasicButton onClick={() => setShowModal(false)}>Close</BasicButton>
+        </f.FormModal>,
+        document.body
+      )}
     </f.FormBox>
   )
 }
