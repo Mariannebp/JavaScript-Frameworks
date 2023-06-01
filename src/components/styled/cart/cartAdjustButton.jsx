@@ -7,4 +7,5 @@ export const CartAdjustButton = styled.button`
   border: 1px solid var(--color-border);
   width: 25px;
   height: 25px;
+  cursor: pointer;
 `;

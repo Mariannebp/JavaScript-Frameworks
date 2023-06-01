@@ -8,6 +8,7 @@ function useCart() {
   const cart = useCartStore((state) => state.cart);
   const addOne = useCartStore((state) => state.addOne);
   const removeOne = useCartStore((state) => state.removeOne);
+  const removeItemFromCart = useCartStore((state) => state.removeItemFromCart);
   const emptyCart = useCartStore((state) => state.emptyCart);
 
   /**
@@ -23,6 +24,7 @@ function useCart() {
     addOne,
     removeOne,
     addItemToCart,
+    removeItemFromCart,
     emptyCart,
   };
 }

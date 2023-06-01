@@ -4,11 +4,11 @@ export const CartContainer = styled.div`
   margin: 0 auto 50px auto;
   width: 522px;
 
-  @media (min-width: 431px) and (max-width: 523px) {
+  @media (min-width: 431px) and (max-width: 540px) {
     width: 422px;
   }
 
-  @media (min-width: 340px) and (max-width: 430px) {
+  @media (min-width: 340px) and (max-width: 440px) {
     width: 320px;
   }
 
