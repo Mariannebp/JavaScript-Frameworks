@@ -42,7 +42,7 @@ npm run start
 
 ## Improvements
 
-#### What I have changed since delivery
+#### What I have changed since first delivery
 
 - Added remove item from cart functionality
 - Added confirmation on button when adding item to cart
