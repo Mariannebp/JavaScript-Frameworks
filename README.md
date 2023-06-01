@@ -1,41 +1,59 @@
-# The One and Online Shop - JS Frameworks CA
+# JS Frameworks CA - The One and Online Shop
 
-## Run project
+![Screen shot of project](/src/assets/readme/The-One_edt.jpg)
+
+- Type: JavaScript Frameworks course assignment
+- When: Spring 2023
+- Where: Front End Development course, Noroff School of technology and digital media.
+
+## Description
+
+This is a eCommerce site where users can view and buy a selection of products. For this assignment the site were to be build with React, and it was encouraged to use styled components for styling. This site were to have a given set of features and functions.
+
+On this site the users will be able to 
+- view a list of products
+- search through the list of products
+- view a specific product
+- add a product to cart
+- view a cart page with an overview of products added to the cart as well as the total sum
+- be taken to a checkout success page when clicking the checkout button
+- users may fill out a contact form
+
+## Built with
+
+- React
+- Styled components
+
+## Getting started
+
+### Install
+
+Clone repo https://github.com/Mariannebp/JavaScript-Frameworks.git
+
+```md
+npm i
+```
+
+### Run
 
 ```md
 npm run start
 ```
 
-## Description
+## Improvements
 
-This is a eCommerce store built with React as the course assignment of the JavaScript Frameworks course.
+#### What I have changed since delivery
 
-### Assignment brief
+- Added remove item from cart functionality
+- Added confirmation on button when adding item to cart
+- Added success message when sending contact form
+- Added logo to header
+- Updated this README file
 
-You are tasked with build out the following pages for an eCom store:
+## Contact
 
-- Homepage
-- Individual product page
-- Cart page
-- Checkout success page
+Email:
+mariannebpedersen@gmail.com
 
-The Homepage should have a list of all the products. There should be a a lookahead search bar that filters products when typing in a product name. Clicking on a product should take a user to an individual product page.
-
-You pages should use a <Layout> component that contains a header and footer. The header should contain a nav bar as well as a Cart icon component that acts as a button as well as displays the current number of items in the cart.
-
-The individual product page should display data for a single product. There should be a Add to cart button which, upon clicking, adds the product to the cart. The product page should display the title of the product, the description and the image. There should also be the reviews listed for the product if there are any. You should use the discountedPrice property to display the price of the product. If there is a difference between the discountedPrice and price properties then that means there is a discount for that product. Calculate what this discount is and display it on the page.
-
-Clicking on the Cart icon will load the Cart page which will list all of the products as well as a total. The Cart page will have a Checkout button at the button. Clicking this Checkout button then goes to a Checkout success page.
-
-The Checkout success page will display a message to the user notifying them that their order was successful. There should also be a link that lets a user go back to the store. The cart must be cleared if the user gets to the Checkout success page.
-
-There will be a contact page which will contain a contact form, with the following fields. There must be form validation:
-
-- Full name (Minimum number of characters is 3, required)
-- Subject (Minimum number of characters is 3, required)
-- Email (Must be a valid email address, required)
-- Body (Minimum number of characters is 3, required)
-- You will be using React Router to switch between pages.
-
-Your design should be responsive. You are welcome to use a CSS Framework, however you’re encouraged to design from scratch and use styled-components or CSS Modules.
-
+Link to the project website:
+https://the-one-store-jsf.netlify.app/
