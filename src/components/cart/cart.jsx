@@ -13,7 +13,7 @@ import LinkStyle from "../../components/styled/linkStyle";
  */
 function CartContent() {
   const { data, isLoading, isError } = useApi(url);
-  const { cart, addOne, removeOne, emptyCart } = useCart();
+  const { cart, addOne, removeOne, removeItemFromCart, emptyCart } = useCart();
 
   useEffect(() => {
     document.title = "The One | Cart";
@@ -55,15 +55,17 @@ function CartContent() {
                 <c.CartImg src={filteredItems.imageUrl} alt={filteredItems.title} />
                 <p>{filteredItems.title}</p>
               </c.CartCardBox>
-              <c.CartCardBox2>
+              <c.CartQtyInfo>
                 <c.CartQtyContainer>
                   <c.CartAdjustButton onClick={() => removeOne(id)}>-</c.CartAdjustButton>
                   <c.CartQty>{quantity}</c.CartQty>
                   <c.CartAdjustButton onClick={() => addOne(id)}>+</c.CartAdjustButton>
                 </c.CartQtyContainer>
-                <p>${filteredItems.discountedPrice}</p>
-              </c.CartCardBox2>
-
+                <c.CartQtyContainer>
+                  <p>${filteredItems.discountedPrice}</p>
+                  <c.CardAdjustRemove onClick={() => removeItemFromCart(id)}>x</c.CardAdjustRemove>
+                </c.CartQtyContainer>
+              </c.CartQtyInfo>
             </c.CartCard>
           )
         }))

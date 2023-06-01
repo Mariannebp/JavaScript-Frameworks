@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-  /* text-align: center; */
   margin: 0 auto 50px auto;
   width: 520px;
 

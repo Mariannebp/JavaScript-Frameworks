@@ -13,11 +13,11 @@ export const CartCard = styled.div`
   background-color: var(--color-background);
   width: 500px;
 
-  @media (min-width: 431px) and (max-width: 523px) {
+  @media (min-width: 441px) and (max-width: 540px) {
     width: 400px;
   }
 
-  @media (min-width: 340px) and (max-width: 430px) {
+  @media (min-width: 340px) and (max-width: 440px) {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr;
     gap: 5px;

@@ -63,6 +63,15 @@ const useCartStore = create((set) => ({
     });
   },
 
+  removeItemFromCart: (id) => {
+    set((state) => {
+      const updateCart = state.cart.filter((item) => item.id !== id);
+
+      localStorage.setItem("Cart", JSON.stringify(updateCart));
+      return { cart: updateCart };
+    });
+  },
+
   emptyCart: () => {
     localStorage.removeItem("Cart");
     set({ cart: [] });

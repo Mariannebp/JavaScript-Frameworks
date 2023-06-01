@@ -9,6 +9,11 @@ const BasicButton = styled.button`
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
+
+  :disabled {
+    opacity: 0.8;
+    cursor: default;
+  }
 `;
 
 export default BasicButton;
